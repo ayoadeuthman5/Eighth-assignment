@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .first-section {
+            background-color: skyblue;
+            position: relative;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .first-section h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #fff;
+        }
+        .first-section h4 {
+            margin: 10px 0;
+            font-size: 1.5em;
+            color: #fff;
+        }
+        .first-section .center-image {
+            position: relative;
+            margin-top: 30px;
+        }
+        .first-section .top-right-image {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: auto;
+        }
+        .first-section .left-center-image {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            width: 150px;
+            height: auto;
+        }
+        .second-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+        .second-section .circle-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .second-section h1 {
+            margin-top: 20px;
+            font-size: 2.5em;
+            color: #333;
+        }
+        .second-section p {
+            font-size: 1.2em;
+            color: #666;
+            margin: 20px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .separator {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .separator span {
+            font-size: 2em;
+            color: #999;
+        }
+        .third-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .third-section h1 {
+            color: skyblue;
+            font-size: 2.5em;
+        }
+        .third-section .line {
+            width: 60%;
+            height: 3px;
+            background-color: skyblue;
+            margin: 20px auto;
+        }
+        .third-section .skill {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .third-section .skill .circle-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .third-section .skill h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #333;
+        }
+        .third-section .skill p {
+            font-size: 1.2em;
+            color: #666;
+            margin-top: 10px;
+            max-width: 600px;
+            text-align: left;
+        }
+        .third-section .skill-right {
+            flex-direction: row-reverse;
+        }
+        .third-section .skill-right .circle-image {
+            margin-right: 0;
+            margin-left: 20px;
+        }
+        .fourth-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+        .fourth-section h1 {
+            font-size: 2.5em;
+            color: green;
+            position: relative;
+            display: inline-block;
+        }
+        .fourth-section h1::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 5px;
+            background-color: skyblue;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+        }
+        .portfolio-cards {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .portfolio-card {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px;
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+        }
+        .portfolio-card img {
+            width: 100%;
+            height: auto;
+        }
+        .portfolio-card .card-content {
+            padding: 20px;
+        }
+        .portfolio-card h2 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .portfolio-card p {
+            font-size: 1em;
+            color: #666;
+            margin-top: 10px;
+        }
+        .fifth-section {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+        .fifth-section h1 {
+            color: skyblue;
+            font-size: 2.5em;
+        }
+        .fifth-section h3 {
+            font-size: 1.8em;
+            color: #333;
+            margin-top: 20px;
+        }
+        .fifth-section .contact-button {
+            background-color: green;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 30px;
+            display: inline-block;
+        }
+        .footer {
+            background-color: skyblue;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .footer .social-media {
+            font-size: 1.2em;
+            color: greenyellow;
+            margin: 0 15px;
+            
+        }
+        .footer .copyright {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="first-section">
+        <h1>I'm Ayoade</h1>
+        <h4>A Programmer</h4>
+        <img src="asset/img/mountain.png" alt="Center Image" class="center-image">
+        <img src="asset/img/cloud.png" alt="Top Right Image" class="top-right-image">
+        <img src="asset/img/cloud.png" alt="Left Center Image" class="left-center-image">
+    </div>
+    <div class="second-section">
+        <img src="asset/img/img5-modified.png" alt="Circle Image" class="circle-image">
+        <h1>Hello</h1>
+        <p>Welcome to my personal website. I am a passionate programmer with a love for developing innovative solutions and creating impactful projects. Explore my work and feel free to get in touch.</p>
+    </div>
+    <div class="separator">
+        <span>...</span>
+    </div>
+    <div class="third-section">
+        <h1>My Skills</h1>
+        <div class="line"></div>
+        <div class="skill">
+            <img src="asset/img/computer3-modified (1).png" alt="Skill Image" class="circle-image">
+            <div>
+                <h1>Web Design and Development</h1>
+                <p>I specialize in creating responsive and visually appealing websites. With a strong foundation in HTML, CSS, JavaScript, and various frameworks, I bring your ideas to life on the web.</p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="skill skill-right">
+            <img src="asset/img/Teacher-modified.png" alt="Skill Image 2" class="circle-image">
+            <div>
+                <h1>Backend Development</h1>
+                <p>Proficient in backend technologies, I develop robust and scalable server-side applications. My expertise includes working with databases, APIs, and server management to ensure seamless functionality.</p>
+            </div>
+        </div>
+    </div>
+     <div class="separator">
+        <span>...</span>
+    </div>
+    <div class="fourth-section">
+        <h1>My Portfolio Gallery</h1>
+        <div class="portfolio-cards">
+            <div class="portfolio-card">
+                <img src="asset/img/1.jpg" alt="Portfolio Image 3">
+            </div>
+            <div class="portfolio-card">
+                <img src="asset/img/2.jpg" alt="Portfolio Image 3">
+            </div>
+            <div class="portfolio-card">
+                <img src="asset/img/3.jpg" alt="Portfolio Image 3">
+            </div>
+        </div>
+        <div class="portfolio-cards">
+            <div class="portfolio-card">
+                <img src="asset/img/4.jpg" alt="Portfolio Image 3">
+            </div>
+            <div class="portfolio-card">
+                <img src="asset/img/5.jpg" alt="Portfolio Image 3">
+            </div>
+            <div class="portfolio-card">
+                <img src="asset/img/6.jpg" alt="Portfolio Image 3">
+            </div>
+        </div>
+    </div>
+    <div class="fifth-section">
+        <h1>Get in Touch</h1>
+        <h5>Loving coding as much as I do?</h5>
+        <p>Then hit me up Let's code</p>
+        <button class="contact-button">Contact Me</button>
+    </div>
+    <div class="footer">
+        <div>
+            <span class="social-media"><a href="">Facebook</a></span>
+            <span class="social-media"><a href="">Twitter</a></span>
+            <span class="social-media"><a href="">LinkedIn</a></span>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Ayoade. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
